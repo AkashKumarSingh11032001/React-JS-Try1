@@ -11,7 +11,6 @@ function App() {
       {/* Text-area */}
       <div className="container">
         <TextForm name = "Enter your text here"/>
-
       </div>
 
     </>

@@ -24,10 +24,12 @@ export default function TextForm(props) {
     }
 
     // setting useState properties
-    const [text, setText] = useState("Enter Your Text Here!")
+    const [text, setText] = useState("")
 
     return (
-        <div>
+
+        <>
+        <div className ="container">
             <br></br>
             <h1>{props.name}</h1>
             <div className="mb-3">
@@ -37,6 +39,14 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert To LowerCase</button>
             <button className="btn btn-primary mx-3" onClick={handleLenClick}>Text Length</button>
         </div>
+        <div className="container">
+            <h2>Your Text Summary</h2>
+            <p>{text.split(" ").length-1} words and {text.length} characters</p>
+            <p>Approx. reading time {0.008*text.split(" ").length} min</p>
+            <p>Preview</p>
+            <p>{text}</p>
+        </div>
+        </>
     );
 }
 
