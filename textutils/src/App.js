@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-// import TextForm from './components/TextForm';
+import TextForm from './components/TextForm';
 import './App.css';
 import About from './components/About';
 
@@ -10,9 +10,9 @@ function App() {
       <Navbar title="TextUtiles" aboutText="About Us" />
 
       {/* Text-area */}
-      {/* <div className="container">
+      <div className="container">
         <TextForm name = "Enter your text here"/>
-      </div> */}
+      </div>
 
       {/* About -Dark mode */}
       <About/>

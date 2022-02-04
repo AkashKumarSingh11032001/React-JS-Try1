@@ -31,6 +31,16 @@ export default function TextForm(props) {
         console.log("OnChnage was clicked")
         setText(event.target.value) //for updating the text field
     }
+    const handleCopy = (event) => {
+        console.log("Copy clicked")
+        var text = document.getElementById("mybox")
+        text.select()
+        navigator.clipboard.writeText(text.value)
+    }
+    const handleExtraSpaces = () =>{
+        let newText = text.split(/[ ]+/)
+        setText(newText.join(" "))
+    }
 
     // setting useState properties
     const [text, setText] = useState("")
@@ -48,6 +58,8 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert To LowerCase</button>
             <button className="btn btn-primary mx-1" onClick={handleTitClick}>Title Case</button>
             <button className="btn btn-primary mx-1" onClick={handleRevClick}>Reverse Text</button>
+            <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
+            <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Space</button>
             <button className="btn btn-primary mx-1" onClick={handleLenClick}>Text Length</button>
         </div>
         <div className="container">
