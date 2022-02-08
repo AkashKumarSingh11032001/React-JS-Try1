@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import React, { useState } from 'react'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   const toggleMode = () =>{
     if(mode === "light"){
       setMode("dark")
-      document.body.style.backgroundColor = "grey";
+      document.body.style.backgroundColor = "#042743";
     }
     else{
       setMode("light")
