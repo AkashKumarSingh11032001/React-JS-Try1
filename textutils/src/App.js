@@ -27,7 +27,7 @@ function App() {
       </div>
 
       {/* About -Dark mode */}
-      <About/>
+      {/* <About/> */}
 
     </>
   );
