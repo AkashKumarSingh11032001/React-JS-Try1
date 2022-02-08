@@ -20,12 +20,12 @@ function App() {
     if(mode === "light"){
       setMode("dark")
       document.body.style.backgroundColor = "#042743";
-      setAlert("Dark Mode Enabled")
+      showAlert("Dark Mode Enabled","success")
     }
     else{
       setMode("light")
       document.body.style.backgroundColor = "white";
-      setAlert("Light Mode Enabled")
+      showAlert("Light Mode Enabled")
     }
   }
   return (
