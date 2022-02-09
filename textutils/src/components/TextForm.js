@@ -49,16 +49,16 @@ export default function TextForm(props) {
             <div className="mb-3">
                 <textarea className="form-control my-3" value={text} style={{backgroundColor: props.mode === "dark"?"grey":"white", color:props.mode === "dark"?"white":"black" }} onChange={handleOnChange} id="mybox" rows="8"></textarea>
             </div>
-            <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert To UpperCase</button>
-            <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert To LowerCase</button>
-            <button className="btn btn-primary mx-1" onClick={handleTitClick}>Title Case</button>
-            <button className="btn btn-primary mx-1" onClick={handleRevClick}>Reverse Text</button>
-            <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
-            <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Space</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert To UpperCase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert To LowerCase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleTitClick}>Title Case</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleRevClick}>Reverse Text</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Space</button>
         </div>
         <div className="container my-3" style={{backgroundColor: props.mode === "dark"?"#042743":"white",color: props.mode === "dark"?"white":"black"}}>
             <h2>Your Text Summary</h2>
-            <p>{text.split(" ").length} words and {text.length} characters</p>
+            <p>{text.split(" ").filter((element)=>{return element.length!==0})} words and {text.length} characters</p>
             <p>Approx. reading time {0.008*text.split(" ").length} min</p>
             <p>Preview</p>
             <p>{text}</p>
