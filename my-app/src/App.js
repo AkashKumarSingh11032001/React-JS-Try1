@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Item from './MyItem'
+// import Item from './MyItem'
+
+class StarWars extends React.Component {
+    getNewChar(){
+      alert("Here's your new charater")
+    }
+
+    render() {
+      return (
+        <div>
+        <h1>This is StarWars</h1>
+        <p>Name: </p>
+        <p>HomeWorld</p>
+        <ul>
+          <li>Film</li>
+        </ul>
+        <button className="btn" onClick={()=> this.getNewChar()}>Randomized Characters</button>
+        </div>
+      )
+    }
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Item name="Akash" />
-        <Item name="Fuck OFf" /> 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <StarWars/>
       </header>
     </div>
   );
