@@ -1,11 +1,11 @@
 import React from 'react'
 
-function App() {
+function InputTodo() {
   return (
     <div>
-      <h1>Todo's</h1>
+      
     </div>
   )
 }
 
-export default App;
+export default InputTodo
