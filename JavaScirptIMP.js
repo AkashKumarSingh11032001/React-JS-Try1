@@ -98,3 +98,64 @@ class Movie extends Media {
 // let res = obj.getAverageRating()
 // console.log(res)
 
+
+
+// STATICS KEYWORD [SCHOOL CLASS]
+class School {
+  constructor(name,level,numberOfStudents){
+    this._name = name;
+    this._level = level;
+    this._numberOfStudents = numberOfStudents ;
+  }
+  get name(){
+    return this._name;
+  }
+  get level(){
+    return this._level;
+  }
+  get numberOfStudents(){
+    return this._numberOfStudents;
+  }
+  set numberOfStudents(num){
+    if(typeof num === 'number'){
+      this.numberOfStudents = num;
+    }
+    else{
+      return 'Invalid input: numberOfStudents must be set to a Number.';
+    }
+  }
+  quickFacts(){
+    console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`)
+  }
+  static pickSubstituteTeacher(substituteTeachers){
+    return Math.floor(Math.random()*substituteTeachers.length);
+  }
+}
+
+class PrimarySchool extends School {
+  constructor(name,numberOfStudents,pickupPolicy){
+    super(name,'primary',numberOfStudents);
+    this._pickupPolicy = pickupPolicy
+  }
+  get pickupPolicy(){
+    return this._pickupPolicy;
+  }
+}
+
+class HighSchool extends School {
+  constructor(name,numberOfStudents,sportsTeams){
+    super(name,'high',numberOfStudents);
+    this._sportsTeams = sportsTeams;
+  }
+  get sportsTeams(){
+    return this._sportsTeams;
+  }
+}
+
+const obj = new PrimarySchool('Lorraine Hansbury',514,'Students must be picked up by a parent, guardian, or a family member over the age of 13.')
+
+console.log(obj.quickFacts())
+
+const teacher = ['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']; 
+let a  = School.pickSubstituteTeacher(teacher)
+console.log(teacher[a])
