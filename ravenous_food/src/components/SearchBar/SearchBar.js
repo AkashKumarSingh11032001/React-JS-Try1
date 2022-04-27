@@ -8,7 +8,7 @@ const sortByOptions = {
 }
 
 
-class SearchBar extends Component {
+class SearchBar extends React.Component {
     renderSortByOptions() {
         sortByOptions.keys(sortByOptions).map(x => { <li key={x}>{sortByOptions[x]}</li> });
     }
