@@ -22,6 +22,8 @@ const businesses = [
   business,
   business,
   business,
+  business,
+  business,
   business
 ];
 
